@@ -66,6 +66,10 @@ span {
 
 .navbar {
     display: flex;
+    margin-left: auto;
+    padding-right: 2rem;
+
+
 }
 
 .navbar a {
@@ -80,7 +84,7 @@ span {
 
 .navbar a:hover, .navbar a:active {
     color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    
 }
 
 .nav-btn {
@@ -138,6 +142,36 @@ span {
     font-weight: 700;
     line-height: 1.3;
 }
+
+
+
+.typewriter {
+    
+
+}
+
+.typewriter span {
+    border-right: 2px solid red;
+    animation: typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    overflow: hidden !important;
+    white-space: nowrap; /* Keeps the content on a single line /
+    margin: 0 auto; / Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+}
+
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
 
 .home-img img {
     width: 45vw;
@@ -230,6 +264,8 @@ span {
     cursor: pointer;
 }
 
+
+
 /* About Section Code  */
 
 .about {
@@ -252,7 +288,7 @@ span {
     cursor: pointer;
 }
 
-.about-content .heading {
+.heading {
     text-align: center;
     font-size: 6rem;
 }
