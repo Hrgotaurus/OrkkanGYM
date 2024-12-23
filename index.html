@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <title>ORKKAN Gym Website</title>
 </head>
@@ -12,20 +15,19 @@
 
 
     <!-- Header Section Code -->
-
     <header>
         <a href="#" class="logo">ORKKAN <span>GYM</span></a>
-
-        <div class='bx bx-menu' id="menu-icon"></div>
-        
-        <ul class="navbar">
+    
+        <div class="bx bx-menu" id="menu-icon"></div>
+    
+        <ul class="navbar" id="navbar">
             <li><a href="#home">HOME</a></li>
             <li><a href="#services">SERVICES</a></li>
             <li><a href="#about">ABOUT</a></li>
-            <li><a href="#plans">PRICING</a></li>
-            <li><a href="#review">RREVIEW</a></li>
+            <li><a href="#pricing">PRICING</a></li>
+            <li><a href="#review">REVIEW</a></li>
         </ul>
-
+    
         <div class="top-btn">
             <a href="#" class="nav-btn">JOIN US!</a>
         </div>
@@ -112,5 +114,114 @@
         </div>
 
      </section>
+
+     <!-- Pricing Section Code -->
+
+     <section class="pricing" id="pricing">
+        <h2 class="heading">Our <span>plans</span></h2>
+        <div class="services-content">
+            
+            <div class="pricing-card row">
+                <h3>BASIC <br><span>$100/Month</span></h3>
+                <ul class="pricing-list">
+                    <li>Smart workout plan</li>
+                    <li>At home workouts</li>
+                </ul>
+                <a href="#home" class="join-now">Join Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="pricing-card row">
+                <h3>PRO <br><span>$150/Month</span></h3>
+                <ul class="pricing-list">
+                    <li>PRO GYMS</li>
+                    <li>Smart workout plan</li>
+                    <li>At home workouts</li>
+                </ul>
+                <a href="#home" class="join-now">Join Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="pricing-card row">
+                <h3>PREMIUM <br><span>$300/Month</span></h3>
+                <ul class="pricing-list">
+                    <li>ELITE Gyms & Classes</li>
+                    <li>Pro GYMS</li>
+                    <li>Smart workout plan</li>
+                    <li>At home workouts</li>
+                    <li>Personal training</li>
+                </ul>
+                <a href="#home" class="join-now">Join Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+
+     </section>
+
+     <!-- Review Section Code  -->
+    <section class="review" id="review">
+    <h2 class="heading">Client reviews</h2>
+        <div class="review-content">
+    
+        <div class="review-item">
+            <img src="1.jpg" alt="">
+            <h2>John</h2>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sed voluptate laborum neque itaque, porro delectus quos nobis veniam totam, voluptatum, ducimus nemo! Quia assumenda fugiat quos at, ullam enim.</p>
+        
+        </div>
+
+
+        <div class="review-item">
+            <img src="2.jpg" alt="">
+            <h2>Mark</h2>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamsed voluptate laborum neque itaque, porro delectus quos nobis veniam totavoluptatum, ducimus nemo! Quia assumefugiat quos at, ullam enim.</p>
+        </div>
+
+    
+        <div class="review-item">
+            <img src="3.jpg" alt="">
+            <h2>John</h2>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamsed voluptate laborum neque itaque, porro delectus quosnobis veniam totavoluptatum, ducimus nemo! Quia assumefugiat quos at, ullam enim.</p>
+        </div>
+
+
+
+    </section>
+
+     <!-- FOOTER SECTION CODE -->
+    <footer>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+        <!-- <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a> -->
+        <a href="https://hr.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+    </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        });
+        });
+
+
+
+    </script>
+
 </body>
 </html>

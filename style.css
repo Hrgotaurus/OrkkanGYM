@@ -68,6 +68,7 @@ span {
     display: flex;
     margin-left: auto;
     padding-right: 2rem;
+    transition: all 0.3s ease;
 
 
 }
@@ -143,8 +144,6 @@ span {
     line-height: 1.3;
 }
 
-
-
 .typewriter {
     
 
@@ -155,8 +154,8 @@ span {
     animation: typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
     overflow: hidden !important;
-    white-space: nowrap; /* Keeps the content on a single line /
-    margin: 0 auto; / Gives that scrolling effect as the typing happens */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; 
     letter-spacing: .15em;
 }
 
@@ -279,7 +278,7 @@ span {
     width: 50vw;
     border: 2px solid var(--text-color);
     border-radius: 1rem;
-    transform: 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 
 .about-img img:hover {
@@ -307,7 +306,366 @@ span {
     margin: 2rem 0 2rem;
 }
 
+/* Pricing Section Code */
+
+.pricing {
+    
+    background: var(--snd-bg-color);
+}
+.pricing-card {
+    height: 350px;
+}
+
+.pricing-card h3{
+    font-size: 40px;
+}
+
+.pricing-list li{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    margin-left: 2rem;
+    list-style-type: disc;
+}
+
+.pricing-list li::marker {
+    color: white !important;
+}
+
+.join-now {
+    font-weight: 700;
+    display: inline-block;
+    padding-top: 30px;
+    border-bottom: 2px solid red; 
+    line-height: 40px;
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    
+}
+.join-now:hover {
+    border-bottom: 2px solid rgb(251, 103, 103);
+    
+}
+
+.join-now i {
+    padding-left: 15px;
+    color: rgb(255, 0, 0);
+}
+
+/* Review Section Code */
+
+.review-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    
+}
+
+.review-item {
+    background: var(--snd-bg-color);
+    border-radius: 27px;
+    border: 1px solid transparent;
+    box-shadow: 15px 0 0 red;
+    padding: 20px;
+    transition: all 0.5s ease;
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+    margin-top: 100px;
+}
+
+.review-item:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.04);
+    cursor: pointer;
+  
+}
+
+.review-item h2 {
+    margin-top: 10px;
+    font-size: 3rem;
+}
+.review-item i {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #d2be28;
+}
+
+.review-item p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+
+.review-content img {
+    width: 15rem;
+    border-radius: 50%;
+    border: 3px solid red;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--snd-bg-color);
+}
+
+footer i {
+  color: var(--main-color);
+  font-size: 4rem;
+  padding: 50px;
+  border-radius: 50px;
+  
+  
+  
+}
+
+footer a {
+
+  
+ -webkit-transform-style: var(--main-color);
+}
+
+footer a:hover {
+  cursor: pointer;
+  transform: scale(0.7);
+  border-radius: 5var(--bg-color);
+  opacity:60% var(var(--bg-color));
+  border: 2px var(--main-color);
+  transition: 0.2s ease-out;
+  -webkit-text-stroke-color: var(--main-color);
+
+}
+.topnav {
+  display: none;
+}
+
+
 @media screen and (max-width: 768px) {
 
+  /* NAVBAR HEADER SECTION CODE */
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+  }
+
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+   
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+  .navbar.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+  .navbar a {
+    display: flex;
+    margin: 1.5rem;
+}
+
+  #menu-icon {
+    display: block;
+}
+
+  .top-btn {
+    display: none;
+}
+
+/* NAVIGATION LINKS SECTION CODE */
+section {
+  min-height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.home {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.home-content h3 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.home-content span {
+  font-size: 4rem;
+  font-weight: 550;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+
+
+.typewriter {
+  
+
+}
+
+.typewriter span {
+  border-right: 2px solid red;
+  animation: typing 3.5s steps(30, end),
+  blink-caret .5s step-end infinite;
+  overflow: hidden !important;
+  white-space: nowrap; /* Keeps the content on a single line /
+  margin: 0 auto; / Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+}
+
+.home-img img {
+  display: none;
+  padding-bottom: 0vh;
+  height: 100vw;
+  width: 100vw;
+}
+
+.home-img::before {
+  display: none;
+  content: 'FITNESS';
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  transform: translateX(-50%);
+  font-size: 20rem;
+  font-weight: 400;
+  line-height: 20rem;
+  color: var(--text-color);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
     
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar a {
+    display: flex;
+    margin: 1.5rem;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .top-btn {
+    display: none;
+}
+
+/* NAVIGATION LINKS SECTION CODE */
+section {
+  min-height: 100vh;
+  max-width: 768px;
+  padding: 20rem 8% 2rem;
+}
+
+.home {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.home-content h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.home-content span {
+  font-size: 4rem;
+  font-weight: 550;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+
+
+.typewriter {
+  
+
+}
+
+.typewriter span {
+  border-right: 2px solid red;
+  animation: typing 3.5s steps(30, end),
+  blink-caret .5s step-end infinite;
+  overflow: hidden !important;
+  white-space: nowrap; /* Keeps the content on a single line /
+  margin: 0 auto; / Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+}
+
 }
